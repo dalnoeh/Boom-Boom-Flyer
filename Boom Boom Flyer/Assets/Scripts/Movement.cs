@@ -31,41 +31,64 @@ public class Movement : MonoBehaviour {
         //Move stuff
         if (Input.GetKey(KeyCode.D))
         {
-           hSpeed = hMoveModifier;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            hSpeed = -hMoveModifier;
-        } else if (Input.GetKey(KeyCode.W))
-        {
-            vSpeed = vMoveModifier;
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-           vSpeed = -vMoveModifier;
-        }else
-        {
-            //hSpeed = 0;
-            //vSpeed = 0;
+           hSpeed += hMoveModifier;
         }
 
+        if (Input.GetKey(KeyCode.A))
+        {
+            hSpeed += -hMoveModifier;
+        }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            vSpeed += vMoveModifier;
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+           vSpeed += -vMoveModifier;
+        }
+
+
         //Stop moving stuff
-        //if (Input.GetKeyUp(KeyCode.D))
-        //{
-        //    hSpeed = 0;
-        //}
-        //else if (Input.GetKeyUp(KeyCode.A))
-        //{
-        //    hSpeed = 0;
-        //}
-        //else if (Input.GetKeyUp(KeyCode.W))
-        //{
-        //    vSpeed = 0;
-        //}
-        //else if (Input.GetKeyUp(KeyCode.S))
-        //{
-        //    vSpeed = 0;
-        //}
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            hSpeed = 0;
+        }
+
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            hSpeed = 0;
+        }
+
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            vSpeed = 0;
+        }
+
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            vSpeed = 0;
+        }
+
+
+        if (hSpeed > hMoveModifier)
+        {
+            hSpeed = hMoveModifier;
+        }
+        else if (hSpeed < -hMoveModifier)
+        {
+            hSpeed = -hMoveModifier;
+        }
+
+        if (vSpeed > hMoveModifier)
+        {
+            vSpeed = hMoveModifier;
+        }
+        else if (vSpeed < -hMoveModifier)
+        {
+            vSpeed = -hMoveModifier;
+        }
 
         Move();
 
