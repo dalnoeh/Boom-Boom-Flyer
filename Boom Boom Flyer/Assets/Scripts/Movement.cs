@@ -29,18 +29,18 @@ public class Movement : MonoBehaviour {
 	void Update () {
 
         //Move stuff
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetAxis("Horizontal") > 0)
         {
            hSpeed = hMoveModifier;
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetAxis("Horizontal") < 0)
         {
             hSpeed = -hMoveModifier;
-        } else if (Input.GetKey(KeyCode.W))
+        } else if (Input.GetAxis("Vertical") > 0)
         {
             vSpeed = vMoveModifier;
         }
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetAxis("Vertical") < 0)
         {
            vSpeed = -vMoveModifier;
         }else
@@ -75,9 +75,10 @@ public class Movement : MonoBehaviour {
     public void Move()
     {
         //  gameObject.GetComponent<Rigidbody2D>().AddForce(moveVector);
-
+        //gameObject.GetComponent<Rigidbody2D>().position = new Vector2(moveVector.x + hSpeed, moveVector.y + vSpeed);
         gameObject.transform.position = new Vector2(moveVector.x + hSpeed, moveVector.y + vSpeed);
 
         moveVector = gameObject.transform.position;
+      //  moveVector = gameObject.GetComponent<Rigidbody2D>().position;
     }
 }
