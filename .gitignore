@@ -1,0 +1,49 @@
+# =============== #
+# Unity generated #
+# =============== #
+Boom Boom Flyer/[Ll]ibrary/
+Boom Boom Flyer/[Tt]emp/
+Boom Boom Flyer/[Oo]bj/
+Boom Boom Flyer/[Bb]uild/
+Boom Boom Flyer/[Bb]uilds/
+Boom Boom Flyer/[Ss]ublime/
+Boom Boom Flyer/Assets/AssetStoreTools*
+
+# ==================== #
+# User defined ignores #
+# ==================== #
+
+/Assets/*.meta
+/Temp/*.meta
+/Library/metadata*
+/Library/metadata/*
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+.consulo/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+*.tmp
+*.pdb
+
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
