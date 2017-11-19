@@ -4,7 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayScript : MonoBehaviour {
-
+    void Awake()
+    {
+        Time.timeScale = 1.0f;
+    }
 	// Use this for initialization
 	void Start () {
 		

@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour {
 
     private void Awake()
     {
+        Time.timeScale = 1.0f;
         numberOfDeadPlayers = 0;
         deadRegistered1 = false;
         deadRegistered2 = false;
@@ -65,7 +66,7 @@ public class GameController : MonoBehaviour {
     }
     public void Replay()
     {
-        Time.timeScale = 1.0f;
+        
         StopAllCoroutines();
         SceneManager.LoadScene("Peder", LoadSceneMode.Single);
     }
@@ -73,7 +74,7 @@ public class GameController : MonoBehaviour {
 
     public void Menu()
     {
-        Time.timeScale = 1.0f;
+        
         SceneManager.LoadScene("Menu");
     }
 }
