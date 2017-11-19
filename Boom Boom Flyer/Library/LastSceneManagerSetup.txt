@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/derp.unity
+- path: Assets/Peder.unity
   isLoaded: 1
   isActive: 1
