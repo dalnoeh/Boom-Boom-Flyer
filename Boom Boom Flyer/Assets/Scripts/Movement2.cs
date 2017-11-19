@@ -20,7 +20,7 @@ public class Movement2 : MonoBehaviour {
     private string leftIn;
     private string rightIn;
     private string downIn;
-    private string[] joystickNameArr = new string[4];
+    //private string[] joystickNameArr = new string[4];
     private GameObject player1;
     private GameObject player2;
     private GameObject player3;
@@ -33,7 +33,9 @@ public class Movement2 : MonoBehaviour {
     // Use this for initialization
     private void Awake()
     {
-
+        depleteFuel = false;
+        firstframe = true;
+        dead = false;
         playing = true;
         callTime = Time.time;
     }
@@ -166,12 +168,12 @@ public class Movement2 : MonoBehaviour {
 
         }
 
-            if (Input.GetButton(leftIn))
+            if (Input.GetAxisRaw(leftIn) < 0)
         {
             MoveHorrizontally(leftIn);
         }
 
-        if (Input.GetButton(rightIn))
+        if (Input.GetAxisRaw(rightIn) > 0)
         {
             MoveHorrizontally(rightIn);
         }
@@ -186,7 +188,7 @@ public class Movement2 : MonoBehaviour {
         }
         else
         {
-            Debug.Log("bomb is on cooldown");
+            //Debug.Log("bomb is on cooldown");
         
         }
 

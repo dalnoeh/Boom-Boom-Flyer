@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BombScript : MonoBehaviour {
 
-    public static BombScript bombScriptSingleton;
+    //public static BombScript bombScriptSingleton;
 
     private float lifetime = 3f;
     private float spawntime;
@@ -14,7 +14,7 @@ public class BombScript : MonoBehaviour {
     // Use this for initialization
     void Awake ()
     {
-        bombScriptSingleton = this;
+        //bombScriptSingleton = this;
         spawntime = Time.time;
     }
 	

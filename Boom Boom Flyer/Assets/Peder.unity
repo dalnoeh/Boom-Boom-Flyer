@@ -322,7 +322,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 75936767}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 199868320}
+        m_MethodName: Menu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &75936767
@@ -555,7 +566,6 @@ GameObject:
   - component: {fileID: 224126327}
   - component: {fileID: 224126326}
   - component: {fileID: 224126325}
-  - component: {fileID: 224126324}
   - component: {fileID: 224126328}
   - component: {fileID: 224126329}
   - component: {fileID: 224126330}
@@ -566,22 +576,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &224126324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 224126323}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42e5cf8d4b75ee34bb2dfbf1df6d13bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hSpeed: 0
-  vSpeed: 0
-  hMoveModifier: 0
-  vMoveModifier: 0
-  moveVector: {x: 0, y: 0}
 --- !u!50 &224126325
 Rigidbody2D:
   serializedVersion: 4
@@ -983,7 +977,6 @@ GameObject:
   - component: {fileID: 522607577}
   - component: {fileID: 522607576}
   - component: {fileID: 522607575}
-  - component: {fileID: 522607574}
   - component: {fileID: 522607573}
   - component: {fileID: 522607572}
   - component: {fileID: 522607578}
@@ -1037,22 +1030,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.17093542, y: 0.17675883}
   m_EdgeRadius: 0
---- !u!114 &522607574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 522607571}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42e5cf8d4b75ee34bb2dfbf1df6d13bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hSpeed: 0
-  vSpeed: 0
-  hMoveModifier: 0
-  vMoveModifier: 0
-  moveVector: {x: 0, y: 0}
 --- !u!50 &522607575
 Rigidbody2D:
   serializedVersion: 4
@@ -1230,7 +1207,6 @@ GameObject:
   - component: {fileID: 741986895}
   - component: {fileID: 741986894}
   - component: {fileID: 741986893}
-  - component: {fileID: 741986892}
   - component: {fileID: 741986891}
   - component: {fileID: 741986890}
   - component: {fileID: 741986896}
@@ -1284,22 +1260,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.17093542, y: 0.17675883}
   m_EdgeRadius: 0
---- !u!114 &741986892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 741986889}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42e5cf8d4b75ee34bb2dfbf1df6d13bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hSpeed: 0
-  vSpeed: 0
-  hMoveModifier: 0
-  vMoveModifier: 0
-  moveVector: {x: 0, y: 0}
 --- !u!50 &741986893
 Rigidbody2D:
   serializedVersion: 4
@@ -2739,7 +2699,6 @@ GameObject:
   - component: {fileID: 1878629529}
   - component: {fileID: 1878629528}
   - component: {fileID: 1878629527}
-  - component: {fileID: 1878629526}
   - component: {fileID: 1878629525}
   - component: {fileID: 1878629524}
   - component: {fileID: 1878629530}
@@ -2793,22 +2752,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.17093542, y: 0.17675883}
   m_EdgeRadius: 0
---- !u!114 &1878629526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1878629523}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42e5cf8d4b75ee34bb2dfbf1df6d13bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hSpeed: 0
-  vSpeed: 0
-  hMoveModifier: 0
-  vMoveModifier: 0
-  moveVector: {x: 0, y: 0}
 --- !u!50 &1878629527
 Rigidbody2D:
   serializedVersion: 4

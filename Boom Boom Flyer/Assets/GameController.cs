@@ -14,6 +14,16 @@ public class GameController : MonoBehaviour {
 
     public GameObject endGameObject;
 
+
+    private void Awake()
+    {
+        numberOfDeadPlayers = 0;
+        deadRegistered1 = false;
+        deadRegistered2 = false;
+        deadRegistered3 = false;
+        deadRegistered4 = false;
+
+}
     // Use this for initialization
     void Start ()
     {
@@ -55,6 +65,15 @@ public class GameController : MonoBehaviour {
     }
     public void Replay()
     {
-        SceneManager.LoadScene("Peder");
+        Time.timeScale = 1.0f;
+        StopAllCoroutines();
+        SceneManager.LoadScene("Peder", LoadSceneMode.Single);
+    }
+  
+
+    public void Menu()
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene("Menu");
     }
 }

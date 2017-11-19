@@ -229,7 +229,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\GameController.cs" />
+    <Compile Include="Assets\PlayScript.cs" />
     <Compile Include="Assets\Scripts\BombScript.cs" />
+    <Compile Include="Assets\Scripts\BoomFallScript.cs" />
+    <Compile Include="Assets\Scripts\BoomScript.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\Movement2.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
