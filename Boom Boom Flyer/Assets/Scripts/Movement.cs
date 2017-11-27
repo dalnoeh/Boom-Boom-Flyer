@@ -29,43 +29,66 @@ public class Movement : MonoBehaviour {
 	void Update () {
 
         //Move stuff
-        if (Input.GetAxis("Horizontal") > 0)
+        if (Input.GetKey(KeyCode.D))
         {
-           hSpeed = hMoveModifier;
-        }
-        if (Input.GetAxis("Horizontal") < 0)
-        {
-            hSpeed = -hMoveModifier;
-        } else if (Input.GetAxis("Vertical") > 0)
-        {
-            vSpeed = vMoveModifier;
-        }
-        else if (Input.GetAxis("Vertical") < 0)
-        {
-           vSpeed = -vMoveModifier;
-        }else
-        {
-            //hSpeed = 0;
-            //vSpeed = 0;
+           hSpeed += hMoveModifier;
         }
 
+        if (Input.GetKey(KeyCode.A))
+        {
+            hSpeed += -hMoveModifier;
+        }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            vSpeed += vMoveModifier;
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+           vSpeed += -vMoveModifier;
+        }
+
+
         //Stop moving stuff
-        //if (Input.GetKeyUp(KeyCode.D))
-        //{
-        //    hSpeed = 0;
-        //}
-        //else if (Input.GetKeyUp(KeyCode.A))
-        //{
-        //    hSpeed = 0;
-        //}
-        //else if (Input.GetKeyUp(KeyCode.W))
-        //{
-        //    vSpeed = 0;
-        //}
-        //else if (Input.GetKeyUp(KeyCode.S))
-        //{
-        //    vSpeed = 0;
-        //}
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            hSpeed = 0;
+        }
+
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            hSpeed = 0;
+        }
+
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            vSpeed = 0;
+        }
+
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            vSpeed = 0;
+        }
+
+
+        if (hSpeed > hMoveModifier)
+        {
+            hSpeed = hMoveModifier;
+        }
+        else if (hSpeed < -hMoveModifier)
+        {
+            hSpeed = -hMoveModifier;
+        }
+
+        if (vSpeed > hMoveModifier)
+        {
+            vSpeed = hMoveModifier;
+        }
+        else if (vSpeed < -hMoveModifier)
+        {
+            vSpeed = -hMoveModifier;
+        }
 
         Move();
 
@@ -75,10 +98,9 @@ public class Movement : MonoBehaviour {
     public void Move()
     {
         //  gameObject.GetComponent<Rigidbody2D>().AddForce(moveVector);
-        //gameObject.GetComponent<Rigidbody2D>().position = new Vector2(moveVector.x + hSpeed, moveVector.y + vSpeed);
+
         gameObject.transform.position = new Vector2(moveVector.x + hSpeed, moveVector.y + vSpeed);
 
         moveVector = gameObject.transform.position;
-      //  moveVector = gameObject.GetComponent<Rigidbody2D>().position;
     }
 }
